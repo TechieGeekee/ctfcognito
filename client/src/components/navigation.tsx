@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
+import GlitchText from "@/components/glitch-text";
 import cognitoTechfestLogo from "@assets/Untitled design_1759044466581.png";
 
 export default function Navigation() {
@@ -40,14 +41,16 @@ export default function Navigation() {
           <div className="flex items-center space-x-4">
             <img 
               src={cognitoTechfestLogo} 
-              alt="Royal College Logo" 
+              alt="CTF Logo" 
               className="w-12 h-12 object-contain"
               data-testid="nav-logo"
             />
             <div className="hidden md:block">
-              <span className="text-lg font-semibold text-foreground" data-testid="nav-college-name">
-                Royal College of Engineering & Technology
-              </span>
+              <GlitchText 
+                text="CAPTURE THE FLAG"
+                className="text-xl font-orbitron font-bold uppercase tracking-wider text-primary"
+                data-testid="nav-college-name"
+              />
             </div>
           </div>
           
