@@ -107,7 +107,7 @@ export default function Home() {
             variants={fadeInUp}
             data-testid="organizer-text"
           >
-            Organized by Royal College of Engineering and Technology
+            Capture The Flag
           </motion.p>
 
           {/* Countdown Timer */}
@@ -257,7 +257,7 @@ export default function Home() {
                   />
                 </div>
                 <p className="text-lg text-muted-foreground">Hosted By</p>
-                <p className="text-xl font-semibold text-primary">Royal College of Engineering & Technology</p>
+                <p className="text-xl font-semibold text-primary">Capture The Flag</p>
               </div>
             </div>
           </motion.div>
