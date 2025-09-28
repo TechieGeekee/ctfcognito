@@ -4,7 +4,7 @@ import Navigation from "@/components/navigation";
 import AnimatedBackground from "@/components/animated-background";
 import FloatingParticles from "@/components/floating-particles";
 import CountdownTimer from "@/components/countdown-timer";
-import GlitchText from "@/components/glitch-text";
+import ModernText from "@/components/modern-text";
 import CyberCard from "@/components/cyber-card";
 import { Button } from "@/components/ui/button";
 import { 
@@ -87,7 +87,7 @@ export default function Home() {
 
           {/* Main Heading */}
           <motion.div variants={fadeInUp}>
-            <GlitchText 
+            <ModernText 
               text="CTF COGNITO" 
               className="text-6xl md:text-8xl font-orbitron font-black mb-6 text-gradient"
               data-testid="main-heading"
