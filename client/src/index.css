@@ -316,32 +316,143 @@
   100% { opacity: 1; transform: scaleY(2); }
 }
 
-/* 3D Effect Enhancements */
+/* Enhanced 3D Effect Enhancements */
 .card-3d {
   transform-style: preserve-3d;
-  transition: transform 0.3s ease;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
 }
 
 .card-3d:hover {
-  transform: perspective(1000px) rotateX(5deg) rotateY(5deg) translateZ(10px);
+  transform: perspective(1000px) rotateX(5deg) rotateY(5deg) translateZ(15px) scale(1.02);
+  box-shadow: 
+    0 25px 50px rgba(147, 51, 234, 0.3),
+    0 0 50px rgba(6, 182, 212, 0.2),
+    inset 0 0 20px rgba(147, 51, 234, 0.1);
 }
 
 .floating-element {
-  animation: float-3d 6s ease-in-out infinite;
+  animation: float-3d 8s ease-in-out infinite;
 }
 
 @keyframes float-3d {
   0%, 100% { 
-    transform: perspective(1000px) rotateX(0deg) rotateY(0deg) translateZ(0px);
+    transform: perspective(1000px) rotateX(0deg) rotateY(0deg) translateZ(0px) translateY(0px);
   }
   25% { 
-    transform: perspective(1000px) rotateX(2deg) rotateY(2deg) translateZ(5px);
+    transform: perspective(1000px) rotateX(3deg) rotateY(3deg) translateZ(8px) translateY(-10px);
   }
   50% { 
-    transform: perspective(1000px) rotateX(0deg) rotateY(4deg) translateZ(10px);
+    transform: perspective(1000px) rotateX(0deg) rotateY(6deg) translateZ(15px) translateY(-20px);
   }
   75% { 
-    transform: perspective(1000px) rotateX(-2deg) rotateY(2deg) translateZ(5px);
+    transform: perspective(1000px) rotateX(-3deg) rotateY(3deg) translateZ(8px) translateY(-10px);
+  }
+}
+
+/* Advanced Animation Effects */
+.morphing-border {
+  position: relative;
+  overflow: hidden;
+}
+
+.morphing-border::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(6, 182, 212, 0.4), transparent);
+  animation: shine 3s ease-in-out infinite;
+  z-index: 1;
+}
+
+@keyframes shine {
+  0% { left: -100%; }
+  100% { left: 100%; }
+}
+
+.tilt-effect {
+  transition: transform 0.3s ease-out;
+}
+
+.tilt-effect:hover {
+  transform: perspective(1000px) rotateX(10deg) rotateY(10deg) scale3d(1.05, 1.05, 1.05);
+}
+
+.hologram-effect {
+  position: relative;
+  background: linear-gradient(45deg, 
+    rgba(6, 182, 212, 0.1) 0%, 
+    rgba(147, 51, 234, 0.1) 25%, 
+    rgba(236, 72, 153, 0.1) 50%, 
+    rgba(59, 130, 246, 0.1) 75%, 
+    rgba(6, 182, 212, 0.1) 100%);
+  background-size: 400% 400%;
+  animation: hologram-shift 6s ease infinite;
+}
+
+@keyframes hologram-shift {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+.particle-trail {
+  position: relative;
+  overflow: visible;
+}
+
+.particle-trail::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 4px;
+  height: 4px;
+  background: hsl(292, 76%, 58%);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  animation: particle-float 4s ease-in-out infinite;
+  opacity: 0;
+}
+
+@keyframes particle-float {
+  0%, 100% { 
+    opacity: 0; 
+    transform: translate(-50%, -50%) scale(0);
+  }
+  25% { 
+    opacity: 1; 
+    transform: translate(-30px, -30px) scale(1);
+  }
+  50% { 
+    opacity: 0.5; 
+    transform: translate(30px, -60px) scale(0.5);
+  }
+  75% { 
+    opacity: 0.8; 
+    transform: translate(60px, 30px) scale(0.8);
+  }
+}
+
+.cyber-pulse {
+  animation: cyber-pulse-effect 3s ease-in-out infinite;
+}
+
+@keyframes cyber-pulse-effect {
+  0%, 100% {
+    box-shadow: 
+      0 0 20px rgba(6, 182, 212, 0.4),
+      0 0 40px rgba(147, 51, 234, 0.2),
+      inset 0 0 20px rgba(6, 182, 212, 0.1);
+  }
+  50% {
+    box-shadow: 
+      0 0 40px rgba(6, 182, 212, 0.8),
+      0 0 80px rgba(147, 51, 234, 0.6),
+      inset 0 0 40px rgba(6, 182, 212, 0.3);
+    transform: scale(1.02);
   }
 }
 

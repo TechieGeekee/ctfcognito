@@ -73,23 +73,26 @@ export default function Home() {
           animate="animate"
           variants={staggerContainer}
         >
-          {/* CTF Cognito Logo */}
+          {/* CTF Cognito Logo with Enhanced 3D Effects */}
           <motion.div className="mb-8 flex justify-center" variants={fadeInUp}>
-            <div className="relative">
+            <div className="relative floating-element">
+              <div className="absolute inset-0 bg-gradient-to-r from-primary/20 to-secondary/20 rounded-full blur-3xl animate-pulse"></div>
               <img 
                 src={ctfCognitoLogo} 
                 alt="CTF Cognito Logo" 
-                className="w-64 h-64 object-contain logo-glow" 
+                className="w-64 h-64 object-contain logo-glow card-3d relative z-10" 
                 data-testid="ctf-cognito-logo"
               />
+              <div className="absolute -inset-4 bg-gradient-to-r from-primary via-accent to-secondary rounded-full opacity-30 blur-xl animate-pulse"></div>
             </div>
           </motion.div>
 
           {/* Main Heading */}
-          <motion.div variants={fadeInUp}>
+          <motion.div variants={fadeInUp} className="relative">
+            <div className="absolute inset-0 text-6xl md:text-8xl font-orbitron font-black mb-6 text-gradient opacity-20 blur-sm animate-pulse transform scale-105">CTF COGNITO</div>
             <GlitchText 
               text="CTF COGNITO" 
-              className="text-6xl md:text-8xl font-orbitron font-black mb-6 text-gradient"
+              className="text-6xl md:text-8xl font-orbitron font-black mb-6 text-gradient relative z-10 floating-element"
               data-testid="main-heading"
             />
           </motion.div>
@@ -118,27 +121,30 @@ export default function Home() {
             <CountdownTimer targetDate="2025-10-17T10:00:00" />
           </motion.div>
 
-          {/* CTA Buttons */}
+          {/* Enhanced CTA Buttons with 3D Effects */}
           <motion.div 
-            className="flex flex-col sm:flex-row gap-4 justify-center"
+            className="flex flex-col sm:flex-row gap-6 justify-center"
             variants={fadeInUp}
           >
             <Button
               onClick={handleRegistration}
-              className="inline-flex items-center px-8 py-4 bg-primary hover:bg-primary/90 text-primary-foreground font-semibold rounded-lg transition-all duration-300 animate-pulse-glow"
+              className="group relative inline-flex items-center px-8 py-4 bg-primary hover:bg-primary/90 text-primary-foreground font-semibold rounded-lg transition-all duration-300 animate-pulse-glow transform hover:scale-105 hover:rotate-1 card-3d overflow-hidden"
               data-testid="button-register"
             >
-              <Users className="mr-3 h-5 w-5" />
-              Register Now
+              <div className="absolute inset-0 bg-gradient-to-r from-primary to-accent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              <Users className="mr-3 h-5 w-5 relative z-10 group-hover:animate-bounce" />
+              <span className="relative z-10">Register Now</span>
+              <div className="absolute inset-0 bg-white/20 transform translate-x-full group-hover:translate-x-0 transition-transform duration-500 skew-x-12"></div>
             </Button>
             <Button
               variant="outline"
-              className="inline-flex items-center px-8 py-4 border-2 border-secondary text-secondary hover:bg-secondary hover:text-secondary-foreground rounded-lg transition-all duration-300"
+              className="group relative inline-flex items-center px-8 py-4 border-2 border-secondary text-secondary hover:bg-secondary hover:text-secondary-foreground rounded-lg transition-all duration-300 transform hover:scale-105 hover:-rotate-1 card-3d overflow-hidden neon-border"
               onClick={() => document.getElementById('event')?.scrollIntoView({ behavior: 'smooth' })}
               data-testid="button-learn-more"
             >
-              <Info className="mr-3 h-5 w-5" />
-              Learn More
+              <div className="absolute inset-0 bg-gradient-to-r from-secondary to-accent opacity-0 group-hover:opacity-20 transition-opacity duration-300"></div>
+              <Info className="mr-3 h-5 w-5 relative z-10 group-hover:animate-spin" />
+              <span className="relative z-10">Learn More</span>
             </Button>
           </motion.div>
         </motion.div>
@@ -175,7 +181,7 @@ export default function Home() {
           >
             {/* Date & Time */}
             <motion.div variants={fadeInUp}>
-              <CyberCard className="text-center card-3d floating-element neon-border" data-testid="card-date-time">
+              <CyberCard className="text-center card-3d floating-element neon-border morphing-border cyber-pulse" data-testid="card-date-time">
                 <Calendar className="text-4xl text-primary mb-4 mx-auto" />
                 <h3 className="text-2xl font-orbitron font-bold mb-4 text-foreground">Date & Time</h3>
                 <div className="space-y-2">
@@ -188,7 +194,7 @@ export default function Home() {
 
             {/* Prizes */}
             <motion.div variants={fadeInUp}>
-              <CyberCard className="text-center card-3d floating-element neon-border" data-testid="card-prizes">
+              <CyberCard className="text-center card-3d floating-element neon-border hologram-effect" data-testid="card-prizes">
                 <Trophy className="text-4xl text-primary mb-4 mx-auto" />
                 <h3 className="text-2xl font-orbitron font-bold mb-4 text-foreground">Prizes</h3>
                 <div className="space-y-3">
@@ -207,7 +213,7 @@ export default function Home() {
 
             {/* Registration */}
             <motion.div variants={fadeInUp}>
-              <CyberCard className="text-center card-3d floating-element neon-border" data-testid="card-registration">
+              <CyberCard className="text-center card-3d floating-element neon-border tilt-effect particle-trail" data-testid="card-registration">
                 <Users className="text-4xl text-primary mb-4 mx-auto" />
                 <h3 className="text-2xl font-orbitron font-bold mb-4 text-foreground">Registration</h3>
                 <div className="space-y-3">
@@ -299,7 +305,7 @@ export default function Home() {
               viewport={{ once: true }}
             >
               <motion.div variants={fadeInUp}>
-                <CyberCard className="card-3d neon-border" data-testid="card-what-is-ctf">
+                <CyberCard className="card-3d neon-border morphing-border hologram-effect" data-testid="card-what-is-ctf">
                   <h3 className="text-2xl font-orbitron font-bold mb-4 text-primary">
                     <Flag className="inline mr-3" />What is CTF?
                   </h3>
@@ -312,7 +318,7 @@ export default function Home() {
               </motion.div>
 
               <motion.div variants={fadeInUp}>
-                <CyberCard className="card-3d neon-border" data-testid="card-team-format">
+                <CyberCard className="card-3d neon-border tilt-effect cyber-pulse" data-testid="card-team-format">
                   <h3 className="text-2xl font-orbitron font-bold mb-4 text-primary">
                     <Users className="inline mr-3" />Team Format
                   </h3>
@@ -324,7 +330,7 @@ export default function Home() {
               </motion.div>
 
               <motion.div variants={fadeInUp}>
-                <CyberCard className="card-3d neon-border" data-testid="card-eligibility">
+                <CyberCard className="card-3d neon-border morphing-border tilt-effect" data-testid="card-eligibility">
                   <h3 className="text-2xl font-orbitron font-bold mb-4 text-primary">
                     <Globe className="inline mr-3" />Eligibility
                   </h3>
@@ -344,7 +350,7 @@ export default function Home() {
               viewport={{ once: true }}
             >
               <motion.div variants={fadeInUp}>
-                <CyberCard className="card-3d neon-border" data-testid="card-challenge-categories">
+                <CyberCard className="card-3d neon-border hologram-effect particle-trail" data-testid="card-challenge-categories">
                   <h3 className="text-2xl font-orbitron font-bold mb-6 text-primary">
                     <Flag className="inline mr-3" />Challenge Categories
                   </h3>
@@ -367,7 +373,7 @@ export default function Home() {
               </motion.div>
 
               <motion.div variants={fadeInUp}>
-                <CyberCard className="card-3d neon-border" data-testid="card-rules">
+                <CyberCard className="card-3d neon-border cyber-pulse hologram-effect" data-testid="card-rules">
                   <h3 className="text-2xl font-orbitron font-bold mb-4 text-primary">
                     <Check className="inline mr-3" />Rules & Guidelines
                   </h3>
@@ -423,7 +429,7 @@ export default function Home() {
               viewport={{ once: true }}
             >
               <motion.div variants={fadeInUp}>
-                <CyberCard className="card-3d neon-border" data-testid="card-contact-info">
+                <CyberCard className="card-3d neon-border tilt-effect morphing-border" data-testid="card-contact-info">
                   <h3 className="text-2xl font-orbitron font-bold mb-6 text-primary">
                     <Mail className="inline mr-3" />Contact Information
                   </h3>
@@ -454,7 +460,7 @@ export default function Home() {
               </motion.div>
 
               <motion.div variants={fadeInUp}>
-                <CyberCard className="card-3d neon-border" data-testid="card-questions">
+                <CyberCard className="card-3d neon-border hologram-effect particle-trail" data-testid="card-questions">
                   <h3 className="text-2xl font-orbitron font-bold mb-6 text-primary">
                     <Info className="inline mr-3" />Have Questions?
                   </h3>
@@ -482,7 +488,7 @@ export default function Home() {
               viewport={{ once: true }}
             >
               <motion.div variants={fadeInUp}>
-                <CyberCard className="card-3d neon-border" data-testid="card-venue-details">
+                <CyberCard className="card-3d neon-border cyber-pulse tilt-effect" data-testid="card-venue-details">
                   <h3 className="text-2xl font-orbitron font-bold mb-6 text-primary">
                     <MapPin className="inline mr-3" />Venue Details
                   </h3>
@@ -512,7 +518,7 @@ export default function Home() {
               </motion.div>
 
               <motion.div variants={fadeInUp}>
-                <CyberCard className="card-3d neon-border" data-testid="card-what-to-bring">
+                <CyberCard className="card-3d neon-border morphing-border hologram-effect" data-testid="card-what-to-bring">
                   <h3 className="text-2xl font-orbitron font-bold mb-6 text-primary">
                     <Laptop className="inline mr-3" />What to Bring
                   </h3>
