@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { Menu, X, Shield } from "lucide-react";
+import { Menu, X, Home, Calendar, Info, Mail } from "lucide-react";
 import cognitoTechfestLogo from "@assets/Untitled design_1759044466581.png";
 
 export default function Navigation() {
@@ -45,7 +45,6 @@ export default function Navigation() {
               data-testid="nav-logo"
             />
             <div className="hidden md:flex items-center space-x-3">
-              <Shield className="w-6 h-6 text-primary" />
               <div className="flex flex-col">
                 <h1 className="text-2xl font-bold text-foreground tracking-tight leading-none">
                   CAPTURE THE FLAG
@@ -57,34 +56,38 @@ export default function Navigation() {
             </div>
           </div>
           
-          <div className="hidden md:flex space-x-8">
+          <div className="hidden md:flex items-center space-x-2">
             <button 
               onClick={() => scrollToSection('home')}
-              className="text-muted-foreground hover:text-primary transition-colors"
+              className="flex items-center space-x-2 px-4 py-2 rounded-lg text-sm font-medium text-muted-foreground hover:text-foreground hover:bg-muted transition-all duration-200"
               data-testid="nav-link-home"
             >
-              Home
+              <Home className="w-4 h-4" />
+              <span>Home</span>
             </button>
             <button 
               onClick={() => scrollToSection('event')}
-              className="text-muted-foreground hover:text-primary transition-colors"
+              className="flex items-center space-x-2 px-4 py-2 rounded-lg text-sm font-medium text-muted-foreground hover:text-foreground hover:bg-muted transition-all duration-200"
               data-testid="nav-link-event"
             >
-              Event
+              <Calendar className="w-4 h-4" />
+              <span>Event</span>
             </button>
             <button 
               onClick={() => scrollToSection('about')}
-              className="text-muted-foreground hover:text-primary transition-colors"
+              className="flex items-center space-x-2 px-4 py-2 rounded-lg text-sm font-medium text-muted-foreground hover:text-foreground hover:bg-muted transition-all duration-200"
               data-testid="nav-link-about"
             >
-              About
+              <Info className="w-4 h-4" />
+              <span>About</span>
             </button>
             <button 
               onClick={() => scrollToSection('contact')}
-              className="text-muted-foreground hover:text-primary transition-colors"
+              className="flex items-center space-x-2 px-4 py-2 rounded-lg text-sm font-medium text-muted-foreground hover:text-foreground hover:bg-muted transition-all duration-200"
               data-testid="nav-link-contact"
             >
-              Contact
+              <Mail className="w-4 h-4" />
+              <span>Contact</span>
             </button>
           </div>
           
@@ -109,34 +112,38 @@ export default function Navigation() {
           exit={{ opacity: 0, height: 0 }}
           data-testid="nav-mobile-menu"
         >
-          <div className="px-4 py-6 space-y-4">
+          <div className="px-4 py-6 space-y-2">
             <button 
               onClick={() => scrollToSection('home')}
-              className="block w-full text-left text-muted-foreground hover:text-primary transition-colors py-2"
+              className="flex items-center space-x-3 w-full text-left px-3 py-3 rounded-lg text-sm font-medium text-muted-foreground hover:text-foreground hover:bg-muted transition-all duration-200"
               data-testid="nav-mobile-link-home"
             >
-              Home
+              <Home className="w-4 h-4" />
+              <span>Home</span>
             </button>
             <button 
               onClick={() => scrollToSection('event')}
-              className="block w-full text-left text-muted-foreground hover:text-primary transition-colors py-2"
+              className="flex items-center space-x-3 w-full text-left px-3 py-3 rounded-lg text-sm font-medium text-muted-foreground hover:text-foreground hover:bg-muted transition-all duration-200"
               data-testid="nav-mobile-link-event"
             >
-              Event
+              <Calendar className="w-4 h-4" />
+              <span>Event</span>
             </button>
             <button 
               onClick={() => scrollToSection('about')}
-              className="block w-full text-left text-muted-foreground hover:text-primary transition-colors py-2"
+              className="flex items-center space-x-3 w-full text-left px-3 py-3 rounded-lg text-sm font-medium text-muted-foreground hover:text-foreground hover:bg-muted transition-all duration-200"
               data-testid="nav-mobile-link-about"
             >
-              About
+              <Info className="w-4 h-4" />
+              <span>About</span>
             </button>
             <button 
               onClick={() => scrollToSection('contact')}
-              className="block w-full text-left text-muted-foreground hover:text-primary transition-colors py-2"
+              className="flex items-center space-x-3 w-full text-left px-3 py-3 rounded-lg text-sm font-medium text-muted-foreground hover:text-foreground hover:bg-muted transition-all duration-200"
               data-testid="nav-mobile-link-contact"
             >
-              Contact
+              <Mail className="w-4 h-4" />
+              <span>Contact</span>
             </button>
           </div>
         </motion.div>
