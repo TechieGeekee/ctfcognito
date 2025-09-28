@@ -256,7 +256,7 @@ export default function Home() {
                   />
                 </div>
                 <p className="text-lg text-muted-foreground">Hosted By</p>
-                <p className="text-xl font-semibold text-primary">Student Comittee Cybersecurity</p>
+                <p className="text-xl font-semibold text-primary">Student Committee Cybersecurity</p>
               </div>
             </div>
           </motion.div>
