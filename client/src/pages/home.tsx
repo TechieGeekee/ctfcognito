@@ -145,7 +145,8 @@ export default function Home() {
       </section>
 
       {/* Event Details Section */}
-      <section id="event" className="relative section-padding">
+      <section id="event" className="relative section-padding border-t border-primary/20 bg-gradient-to-b from-background via-card/10 to-background">
+        <div className="absolute inset-0 cyber-grid opacity-20"></div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div 
             className="text-center mb-16"
@@ -154,9 +155,12 @@ export default function Home() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <h2 className="text-4xl md:text-5xl font-orbitron font-bold mb-6 text-gradient" data-testid="event-details-heading">
-              Event Details
-            </h2>
+            <div className="section-border">
+              <h2 className="text-5xl md:text-6xl font-orbitron font-black mb-8 text-gradient neon-glow" data-testid="event-details-heading">
+                Event Details
+              </h2>
+            </div>
+            <div className="cyber-separator mb-8"></div>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
               Join the ultimate cybersecurity challenge and test your skills against the best
             </p>
@@ -171,7 +175,7 @@ export default function Home() {
           >
             {/* Date & Time */}
             <motion.div variants={fadeInUp}>
-              <CyberCard className="text-center" data-testid="card-date-time">
+              <CyberCard className="text-center card-3d floating-element neon-border" data-testid="card-date-time">
                 <Calendar className="text-4xl text-primary mb-4 mx-auto" />
                 <h3 className="text-2xl font-orbitron font-bold mb-4 text-foreground">Date & Time</h3>
                 <div className="space-y-2">
@@ -184,7 +188,7 @@ export default function Home() {
 
             {/* Prizes */}
             <motion.div variants={fadeInUp}>
-              <CyberCard className="text-center" data-testid="card-prizes">
+              <CyberCard className="text-center card-3d floating-element neon-border" data-testid="card-prizes">
                 <Trophy className="text-4xl text-primary mb-4 mx-auto" />
                 <h3 className="text-2xl font-orbitron font-bold mb-4 text-foreground">Prizes</h3>
                 <div className="space-y-3">
@@ -203,7 +207,7 @@ export default function Home() {
 
             {/* Registration */}
             <motion.div variants={fadeInUp}>
-              <CyberCard className="text-center" data-testid="card-registration">
+              <CyberCard className="text-center card-3d floating-element neon-border" data-testid="card-registration">
                 <Users className="text-4xl text-primary mb-4 mx-auto" />
                 <h3 className="text-2xl font-orbitron font-bold mb-4 text-foreground">Registration</h3>
                 <div className="space-y-3">
@@ -265,7 +269,8 @@ export default function Home() {
       </section>
 
       {/* About CTF Section */}
-      <section id="about" className="relative section-padding bg-card/30">
+      <section id="about" className="relative section-padding border-t border-secondary/20 bg-gradient-to-r from-primary/5 via-accent/5 to-secondary/5">
+        <div className="absolute inset-0 circuit-pattern opacity-30"></div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div 
             className="text-center mb-16"
@@ -274,9 +279,12 @@ export default function Home() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <h2 className="text-4xl md:text-5xl font-orbitron font-bold mb-6 text-gradient" data-testid="about-ctf-heading">
-              About CTF
-            </h2>
+            <div className="section-border">
+              <h2 className="text-5xl md:text-6xl font-orbitron font-black mb-8 text-gradient neon-glow" data-testid="about-ctf-heading">
+                About CTF
+              </h2>
+            </div>
+            <div className="cyber-separator mb-8"></div>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
               Capture The Flag is a cybersecurity competition designed to challenge and develop your hacking skills
             </p>
@@ -291,7 +299,7 @@ export default function Home() {
               viewport={{ once: true }}
             >
               <motion.div variants={fadeInUp}>
-                <CyberCard data-testid="card-what-is-ctf">
+                <CyberCard className="card-3d neon-border" data-testid="card-what-is-ctf">
                   <h3 className="text-2xl font-orbitron font-bold mb-4 text-primary">
                     <Flag className="inline mr-3" />What is CTF?
                   </h3>
@@ -304,7 +312,7 @@ export default function Home() {
               </motion.div>
 
               <motion.div variants={fadeInUp}>
-                <CyberCard data-testid="card-team-format">
+                <CyberCard className="card-3d neon-border" data-testid="card-team-format">
                   <h3 className="text-2xl font-orbitron font-bold mb-4 text-primary">
                     <Users className="inline mr-3" />Team Format
                   </h3>
@@ -316,7 +324,7 @@ export default function Home() {
               </motion.div>
 
               <motion.div variants={fadeInUp}>
-                <CyberCard data-testid="card-eligibility">
+                <CyberCard className="card-3d neon-border" data-testid="card-eligibility">
                   <h3 className="text-2xl font-orbitron font-bold mb-4 text-primary">
                     <Globe className="inline mr-3" />Eligibility
                   </h3>
@@ -336,7 +344,7 @@ export default function Home() {
               viewport={{ once: true }}
             >
               <motion.div variants={fadeInUp}>
-                <CyberCard data-testid="card-challenge-categories">
+                <CyberCard className="card-3d neon-border" data-testid="card-challenge-categories">
                   <h3 className="text-2xl font-orbitron font-bold mb-6 text-primary">
                     <Flag className="inline mr-3" />Challenge Categories
                   </h3>
@@ -359,7 +367,7 @@ export default function Home() {
               </motion.div>
 
               <motion.div variants={fadeInUp}>
-                <CyberCard data-testid="card-rules">
+                <CyberCard className="card-3d neon-border" data-testid="card-rules">
                   <h3 className="text-2xl font-orbitron font-bold mb-4 text-primary">
                     <Check className="inline mr-3" />Rules & Guidelines
                   </h3>
@@ -384,7 +392,8 @@ export default function Home() {
       </section>
 
       {/* Contact & Venue Section */}
-      <section id="contact" className="relative section-padding">
+      <section id="contact" className="relative section-padding border-t border-accent/20 bg-gradient-to-br from-background via-muted/10 to-card/20">
+        <div className="absolute inset-0 holographic opacity-10"></div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div 
             className="text-center mb-16"
@@ -393,9 +402,12 @@ export default function Home() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <h2 className="text-4xl md:text-5xl font-orbitron font-bold mb-6 text-gradient" data-testid="contact-venue-heading">
-              Contact & Venue
-            </h2>
+            <div className="section-border">
+              <h2 className="text-5xl md:text-6xl font-orbitron font-black mb-8 text-gradient neon-glow" data-testid="contact-venue-heading">
+                Contact & Venue
+              </h2>
+            </div>
+            <div className="cyber-separator mb-8"></div>
             <p className="text-xl text-muted-foreground">
               Get in touch with us for any queries or additional information
             </p>
@@ -411,7 +423,7 @@ export default function Home() {
               viewport={{ once: true }}
             >
               <motion.div variants={fadeInUp}>
-                <CyberCard data-testid="card-contact-info">
+                <CyberCard className="card-3d neon-border" data-testid="card-contact-info">
                   <h3 className="text-2xl font-orbitron font-bold mb-6 text-primary">
                     <Mail className="inline mr-3" />Contact Information
                   </h3>
@@ -442,7 +454,7 @@ export default function Home() {
               </motion.div>
 
               <motion.div variants={fadeInUp}>
-                <CyberCard data-testid="card-questions">
+                <CyberCard className="card-3d neon-border" data-testid="card-questions">
                   <h3 className="text-2xl font-orbitron font-bold mb-6 text-primary">
                     <Info className="inline mr-3" />Have Questions?
                   </h3>
@@ -470,7 +482,7 @@ export default function Home() {
               viewport={{ once: true }}
             >
               <motion.div variants={fadeInUp}>
-                <CyberCard data-testid="card-venue-details">
+                <CyberCard className="card-3d neon-border" data-testid="card-venue-details">
                   <h3 className="text-2xl font-orbitron font-bold mb-6 text-primary">
                     <MapPin className="inline mr-3" />Venue Details
                   </h3>
@@ -500,7 +512,7 @@ export default function Home() {
               </motion.div>
 
               <motion.div variants={fadeInUp}>
-                <CyberCard data-testid="card-what-to-bring">
+                <CyberCard className="card-3d neon-border" data-testid="card-what-to-bring">
                   <h3 className="text-2xl font-orbitron font-bold mb-6 text-primary">
                     <Laptop className="inline mr-3" />What to Bring
                   </h3>
@@ -525,7 +537,8 @@ export default function Home() {
       </section>
 
       {/* Final CTA Section */}
-      <section className="relative section-padding bg-gradient-to-r from-primary/20 via-accent/20 to-secondary/20">
+      <section className="relative section-padding border-t border-primary/30 bg-gradient-to-r from-primary/20 via-accent/20 to-secondary/20">
+        <div className="absolute inset-0 matrix-rain opacity-20"></div>
         <motion.div 
           className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center"
           initial={{ opacity: 0, y: 40 }}
