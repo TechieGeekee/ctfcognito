@@ -41,8 +41,7 @@ export default function Home() {
   }, []);
 
   const handleRegistration = () => {
-    // TODO: Replace with actual Google Forms URL
-    alert('Registration form will be integrated here. Please contact organizers for now.');
+    window.open('https://docs.google.com/forms/d/e/1FAIpQLSev7Ci4m418KohWOVVkdB5-UqBE8iX6b-7yeMMSJ8lcuv2TrQ/viewform?usp=header', '_blank');
   };
 
   const fadeInUp = {
