@@ -1,8 +1,7 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { Menu, X } from "lucide-react";
-import GlitchText from "@/components/glitch-text";
+import { Menu, X, Shield } from "lucide-react";
 import cognitoTechfestLogo from "@assets/Untitled design_1759044466581.png";
 
 export default function Navigation() {
@@ -45,12 +44,16 @@ export default function Navigation() {
               className="w-12 h-12 object-contain"
               data-testid="nav-logo"
             />
-            <div className="hidden md:block">
-              <GlitchText 
-                text="CAPTURE THE FLAG"
-                className="text-xl font-orbitron font-bold uppercase tracking-wider text-primary"
-                data-testid="nav-college-name"
-              />
+            <div className="hidden md:flex items-center space-x-3">
+              <Shield className="w-6 h-6 text-primary" />
+              <div className="flex flex-col">
+                <h1 className="text-2xl font-bold text-foreground tracking-tight leading-none">
+                  CAPTURE THE FLAG
+                </h1>
+                <p className="text-xs text-muted-foreground font-medium uppercase tracking-widest">
+                  Cybersecurity Challenge
+                </p>
+              </div>
             </div>
           </div>
           
