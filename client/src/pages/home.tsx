@@ -73,26 +73,23 @@ export default function Home() {
           animate="animate"
           variants={staggerContainer}
         >
-          {/* CTF Cognito Logo with Enhanced 3D Effects */}
+          {/* CTF Cognito Logo */}
           <motion.div className="mb-8 flex justify-center" variants={fadeInUp}>
-            <div className="relative floating-element">
-              <div className="absolute inset-0 bg-gradient-to-r from-primary/20 to-secondary/20 rounded-full blur-3xl animate-pulse"></div>
+            <div className="relative">
               <img 
                 src={ctfCognitoLogo} 
                 alt="CTF Cognito Logo" 
-                className="w-64 h-64 object-contain logo-glow card-3d relative z-10" 
+                className="w-64 h-64 object-contain" 
                 data-testid="ctf-cognito-logo"
               />
-              <div className="absolute -inset-4 bg-gradient-to-r from-primary via-accent to-secondary rounded-full opacity-30 blur-xl animate-pulse"></div>
             </div>
           </motion.div>
 
           {/* Main Heading */}
-          <motion.div variants={fadeInUp} className="relative">
-            <div className="absolute inset-0 text-6xl md:text-8xl font-orbitron font-black mb-6 text-gradient opacity-20 blur-sm animate-pulse transform scale-105">CTF COGNITO</div>
+          <motion.div variants={fadeInUp}>
             <GlitchText 
               text="CTF COGNITO" 
-              className="text-6xl md:text-8xl font-orbitron font-black mb-6 text-gradient relative z-10 floating-element"
+              className="text-6xl md:text-8xl font-orbitron font-black mb-6 text-gradient"
               data-testid="main-heading"
             />
           </motion.div>
@@ -121,38 +118,34 @@ export default function Home() {
             <CountdownTimer targetDate="2025-10-17T10:00:00" />
           </motion.div>
 
-          {/* Enhanced CTA Buttons with 3D Effects */}
+          {/* CTA Buttons */}
           <motion.div 
-            className="flex flex-col sm:flex-row gap-6 justify-center"
+            className="flex flex-col sm:flex-row gap-4 justify-center"
             variants={fadeInUp}
           >
             <Button
               onClick={handleRegistration}
-              className="group relative inline-flex items-center px-8 py-4 bg-primary hover:bg-primary/90 text-primary-foreground font-semibold rounded-lg transition-all duration-300 animate-pulse-glow transform hover:scale-105 hover:rotate-1 card-3d overflow-hidden"
+              className="inline-flex items-center px-8 py-4 bg-primary hover:bg-primary/90 text-primary-foreground font-semibold rounded-lg transition-colors duration-300"
               data-testid="button-register"
             >
-              <div className="absolute inset-0 bg-gradient-to-r from-primary to-accent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-              <Users className="mr-3 h-5 w-5 relative z-10 group-hover:animate-bounce" />
-              <span className="relative z-10">Register Now</span>
-              <div className="absolute inset-0 bg-white/20 transform translate-x-full group-hover:translate-x-0 transition-transform duration-500 skew-x-12"></div>
+              <Users className="mr-3 h-5 w-5" />
+              Register Now
             </Button>
             <Button
               variant="outline"
-              className="group relative inline-flex items-center px-8 py-4 border-2 border-secondary text-secondary hover:bg-secondary hover:text-secondary-foreground rounded-lg transition-all duration-300 transform hover:scale-105 hover:-rotate-1 card-3d overflow-hidden neon-border"
+              className="inline-flex items-center px-8 py-4 border-2 border-secondary text-secondary hover:bg-secondary hover:text-secondary-foreground rounded-lg transition-colors duration-300"
               onClick={() => document.getElementById('event')?.scrollIntoView({ behavior: 'smooth' })}
               data-testid="button-learn-more"
             >
-              <div className="absolute inset-0 bg-gradient-to-r from-secondary to-accent opacity-0 group-hover:opacity-20 transition-opacity duration-300"></div>
-              <Info className="mr-3 h-5 w-5 relative z-10 group-hover:animate-spin" />
-              <span className="relative z-10">Learn More</span>
+              <Info className="mr-3 h-5 w-5" />
+              Learn More
             </Button>
           </motion.div>
         </motion.div>
       </section>
 
       {/* Event Details Section */}
-      <section id="event" className="relative section-padding border-t border-primary/20 bg-gradient-to-b from-background via-card/10 to-background">
-        <div className="absolute inset-0 cyber-grid opacity-20"></div>
+      <section id="event" className="relative section-padding bg-card/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div 
             className="text-center mb-16"
@@ -161,12 +154,9 @@ export default function Home() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <div className="section-border">
-              <h2 className="text-5xl md:text-6xl font-orbitron font-black mb-8 text-gradient neon-glow" data-testid="event-details-heading">
-                Event Details
-              </h2>
-            </div>
-            <div className="cyber-separator mb-8"></div>
+            <h2 className="text-4xl md:text-5xl font-orbitron font-bold mb-6 text-foreground" data-testid="event-details-heading">
+              Event Details
+            </h2>
             <p className="text-xl md:text-2xl text-muted-foreground max-w-4xl mx-auto leading-relaxed">
               Join the ultimate cybersecurity challenge and test your skills against the best minds in Kerala
             </p>
@@ -181,7 +171,7 @@ export default function Home() {
           >
             {/* Date & Time */}
             <motion.div variants={fadeInUp}>
-              <CyberCard className="text-center card-3d floating-element neon-border morphing-border cyber-pulse" data-testid="card-date-time">
+              <CyberCard className="text-center" data-testid="card-date-time">
                 <Calendar className="text-4xl text-primary mb-4 mx-auto" />
                 <h3 className="text-2xl md:text-3xl font-orbitron font-black mb-6 text-gradient">Date & Time</h3>
                 <div className="space-y-2">
@@ -194,7 +184,7 @@ export default function Home() {
 
             {/* Prizes */}
             <motion.div variants={fadeInUp}>
-              <CyberCard className="text-center card-3d floating-element neon-border hologram-effect" data-testid="card-prizes">
+              <CyberCard className="text-center" data-testid="card-prizes">
                 <Trophy className="text-4xl text-primary mb-4 mx-auto" />
                 <h3 className="text-2xl md:text-3xl font-orbitron font-black mb-6 text-gradient">Prizes</h3>
                 <div className="space-y-3">
@@ -213,7 +203,7 @@ export default function Home() {
 
             {/* Registration */}
             <motion.div variants={fadeInUp}>
-              <CyberCard className="text-center card-3d floating-element neon-border tilt-effect particle-trail" data-testid="card-registration">
+              <CyberCard className="text-center" data-testid="card-registration">
                 <Users className="text-4xl text-primary mb-4 mx-auto" />
                 <h3 className="text-2xl md:text-3xl font-orbitron font-black mb-6 text-gradient">Registration</h3>
                 <div className="space-y-3">
@@ -275,8 +265,7 @@ export default function Home() {
       </section>
 
       {/* About CTF Section */}
-      <section id="about" className="relative section-padding border-t border-secondary/20 bg-gradient-to-r from-primary/5 via-accent/5 to-secondary/5">
-        <div className="absolute inset-0 circuit-pattern opacity-30"></div>
+      <section id="about" className="relative section-padding bg-card/20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div 
             className="text-center mb-16"
@@ -285,12 +274,9 @@ export default function Home() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <div className="section-border">
-              <h2 className="text-5xl md:text-6xl font-orbitron font-black mb-8 text-gradient neon-glow" data-testid="about-ctf-heading">
-                About CTF
-              </h2>
-            </div>
-            <div className="cyber-separator mb-8"></div>
+            <h2 className="text-4xl md:text-5xl font-orbitron font-bold mb-6 text-foreground" data-testid="about-ctf-heading">
+              About CTF
+            </h2>
             <p className="text-xl md:text-2xl text-muted-foreground max-w-4xl mx-auto leading-relaxed">
               Capture The Flag is a cybersecurity competition designed to challenge and develop your hacking skills through real-world scenarios
             </p>
@@ -305,7 +291,7 @@ export default function Home() {
               viewport={{ once: true }}
             >
               <motion.div variants={fadeInUp}>
-                <CyberCard className="card-3d neon-border morphing-border hologram-effect" data-testid="card-what-is-ctf">
+                <CyberCard data-testid="card-what-is-ctf">
                   <h3 className="text-2xl font-orbitron font-bold mb-4 text-primary">
                     <Flag className="inline mr-3" />What is CTF?
                   </h3>
@@ -318,7 +304,7 @@ export default function Home() {
               </motion.div>
 
               <motion.div variants={fadeInUp}>
-                <CyberCard className="card-3d neon-border tilt-effect cyber-pulse" data-testid="card-team-format">
+                <CyberCard data-testid="card-team-format">
                   <h3 className="text-2xl font-orbitron font-bold mb-4 text-primary">
                     <Users className="inline mr-3" />Team Format
                   </h3>
@@ -330,7 +316,7 @@ export default function Home() {
               </motion.div>
 
               <motion.div variants={fadeInUp}>
-                <CyberCard className="card-3d neon-border morphing-border tilt-effect" data-testid="card-eligibility">
+                <CyberCard data-testid="card-eligibility">
                   <h3 className="text-2xl font-orbitron font-bold mb-4 text-primary">
                     <Globe className="inline mr-3" />Eligibility
                   </h3>
@@ -350,7 +336,7 @@ export default function Home() {
               viewport={{ once: true }}
             >
               <motion.div variants={fadeInUp}>
-                <CyberCard className="card-3d neon-border hologram-effect particle-trail" data-testid="card-challenge-categories">
+                <CyberCard data-testid="card-challenge-categories">
                   <h3 className="text-2xl font-orbitron font-bold mb-6 text-primary">
                     <Flag className="inline mr-3" />Challenge Categories
                   </h3>
@@ -373,7 +359,7 @@ export default function Home() {
               </motion.div>
 
               <motion.div variants={fadeInUp}>
-                <CyberCard className="card-3d neon-border cyber-pulse hologram-effect" data-testid="card-rules">
+                <CyberCard data-testid="card-rules">
                   <h3 className="text-2xl font-orbitron font-bold mb-4 text-primary">
                     <Check className="inline mr-3" />Rules & Guidelines
                   </h3>
@@ -398,8 +384,7 @@ export default function Home() {
       </section>
 
       {/* Contact & Venue Section */}
-      <section id="contact" className="relative section-padding border-t border-accent/20 bg-gradient-to-br from-background via-muted/10 to-card/20">
-        <div className="absolute inset-0 holographic opacity-10"></div>
+      <section id="contact" className="relative section-padding">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div 
             className="text-center mb-16"
@@ -408,12 +393,9 @@ export default function Home() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <div className="section-border">
-              <h2 className="text-5xl md:text-6xl font-orbitron font-black mb-8 text-gradient neon-glow" data-testid="contact-venue-heading">
-                Contact & Venue
-              </h2>
-            </div>
-            <div className="cyber-separator mb-8"></div>
+            <h2 className="text-4xl md:text-5xl font-orbitron font-bold mb-6 text-foreground" data-testid="contact-venue-heading">
+              Contact & Venue
+            </h2>
             <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
               Get in touch with us for any queries or additional information about the event
             </p>
@@ -429,7 +411,7 @@ export default function Home() {
               viewport={{ once: true }}
             >
               <motion.div variants={fadeInUp}>
-                <CyberCard className="card-3d neon-border tilt-effect morphing-border" data-testid="card-contact-info">
+                <CyberCard data-testid="card-contact-info">
                   <h3 className="text-2xl font-orbitron font-bold mb-6 text-primary">
                     <Mail className="inline mr-3" />Contact Information
                   </h3>
@@ -460,7 +442,7 @@ export default function Home() {
               </motion.div>
 
               <motion.div variants={fadeInUp}>
-                <CyberCard className="card-3d neon-border hologram-effect particle-trail" data-testid="card-questions">
+                <CyberCard data-testid="card-questions">
                   <h3 className="text-2xl font-orbitron font-bold mb-6 text-primary">
                     <Info className="inline mr-3" />Have Questions?
                   </h3>
@@ -488,7 +470,7 @@ export default function Home() {
               viewport={{ once: true }}
             >
               <motion.div variants={fadeInUp}>
-                <CyberCard className="card-3d neon-border cyber-pulse tilt-effect" data-testid="card-venue-details">
+                <CyberCard data-testid="card-venue-details">
                   <h3 className="text-2xl font-orbitron font-bold mb-6 text-primary">
                     <MapPin className="inline mr-3" />Venue Details
                   </h3>
@@ -518,7 +500,7 @@ export default function Home() {
               </motion.div>
 
               <motion.div variants={fadeInUp}>
-                <CyberCard className="card-3d neon-border morphing-border hologram-effect" data-testid="card-what-to-bring">
+                <CyberCard data-testid="card-what-to-bring">
                   <h3 className="text-2xl font-orbitron font-bold mb-6 text-primary">
                     <Laptop className="inline mr-3" />What to Bring
                   </h3>
@@ -543,8 +525,7 @@ export default function Home() {
       </section>
 
       {/* Final CTA Section */}
-      <section className="relative section-padding border-t border-primary/30 bg-gradient-to-r from-primary/20 via-accent/20 to-secondary/20">
-        <div className="absolute inset-0 matrix-rain opacity-20"></div>
+      <section className="relative section-padding bg-gradient-to-r from-primary/10 via-accent/10 to-secondary/10">
         <motion.div 
           className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center"
           initial={{ opacity: 0, y: 40 }}
@@ -597,10 +578,8 @@ export default function Home() {
         </motion.div>
       </section>
 
-      {/* Enhanced Cyber Footer */}
-      <footer className="relative bg-gradient-to-t from-background via-card/50 to-card/20 border-t border-primary/30 section-padding">
-        <div className="absolute inset-0 cyber-grid opacity-20"></div>
-        <div className="absolute inset-0 bg-gradient-to-r from-primary/5 via-accent/5 to-secondary/5"></div>
+      {/* Footer */}
+      <footer className="relative bg-card/50 border-t border-border section-padding">
         
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           {/* Top Section with Enhanced Layout */}
@@ -613,7 +592,7 @@ export default function Home() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.6 }}
               >
-                <h3 className="text-3xl font-orbitron font-black mb-6 text-gradient neon-glow" data-testid="footer-title">
+                <h3 className="text-2xl font-orbitron font-bold mb-4 text-foreground" data-testid="footer-title">
                   CTF COGNITO 2025
                 </h3>
                 <p className="text-lg text-muted-foreground leading-relaxed mb-6">
