@@ -236,11 +236,11 @@ export default function Home() {
             <div className="flex flex-col md:flex-row items-center justify-center space-y-8 md:space-y-0 md:space-x-16">
               {/* Offenso Logo */}
               <div className="text-center" data-testid="organizer-offenso">
-                <div className="mb-4">
+                <div className="mb-4 p-4 bg-card/30 rounded-lg border border-border/50">
                   <img 
                     src={offensoLogo} 
                     alt="Offenso Logo" 
-                    className="w-32 h-16 object-contain mx-auto logo-glow" 
+                    className="w-40 h-20 object-contain mx-auto filter brightness-110 hover:brightness-125 transition-all duration-300" 
                   />
                 </div>
                 <p className="text-lg text-muted-foreground">In Association With</p>
