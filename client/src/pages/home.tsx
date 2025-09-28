@@ -98,7 +98,7 @@ export default function Home() {
           </motion.div>
           
           <motion.p 
-            className="text-xl md:text-2xl text-muted-foreground mb-4 font-medium"
+            className="text-xl md:text-3xl text-muted-foreground mb-6 font-semibold tracking-wide"
             variants={fadeInUp}
             data-testid="subtitle"
           >
@@ -106,7 +106,7 @@ export default function Home() {
           </motion.p>
           
           <motion.p 
-            className="text-lg text-secondary mb-12"
+            className="text-xl md:text-2xl text-secondary mb-16 font-medium tracking-wider"
             variants={fadeInUp}
             data-testid="organizer-text"
           >
@@ -167,8 +167,8 @@ export default function Home() {
               </h2>
             </div>
             <div className="cyber-separator mb-8"></div>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Join the ultimate cybersecurity challenge and test your skills against the best
+            <p className="text-xl md:text-2xl text-muted-foreground max-w-4xl mx-auto leading-relaxed">
+              Join the ultimate cybersecurity challenge and test your skills against the best minds in Kerala
             </p>
           </motion.div>
 
@@ -183,7 +183,7 @@ export default function Home() {
             <motion.div variants={fadeInUp}>
               <CyberCard className="text-center card-3d floating-element neon-border morphing-border cyber-pulse" data-testid="card-date-time">
                 <Calendar className="text-4xl text-primary mb-4 mx-auto" />
-                <h3 className="text-2xl font-orbitron font-bold mb-4 text-foreground">Date & Time</h3>
+                <h3 className="text-2xl md:text-3xl font-orbitron font-black mb-6 text-gradient">Date & Time</h3>
                 <div className="space-y-2">
                   <p className="text-lg font-semibold text-secondary">October 17, 2025</p>
                   <p className="text-lg text-muted-foreground">10:00 AM - 4:00 PM</p>
@@ -196,7 +196,7 @@ export default function Home() {
             <motion.div variants={fadeInUp}>
               <CyberCard className="text-center card-3d floating-element neon-border hologram-effect" data-testid="card-prizes">
                 <Trophy className="text-4xl text-primary mb-4 mx-auto" />
-                <h3 className="text-2xl font-orbitron font-bold mb-4 text-foreground">Prizes</h3>
+                <h3 className="text-2xl md:text-3xl font-orbitron font-black mb-6 text-gradient">Prizes</h3>
                 <div className="space-y-3">
                   <div className="flex justify-between items-center">
                     <span className="text-lg">1st Place</span>
@@ -215,7 +215,7 @@ export default function Home() {
             <motion.div variants={fadeInUp}>
               <CyberCard className="text-center card-3d floating-element neon-border tilt-effect particle-trail" data-testid="card-registration">
                 <Users className="text-4xl text-primary mb-4 mx-auto" />
-                <h3 className="text-2xl font-orbitron font-bold mb-4 text-foreground">Registration</h3>
+                <h3 className="text-2xl md:text-3xl font-orbitron font-black mb-6 text-gradient">Registration</h3>
                 <div className="space-y-3">
                   <div className="flex justify-between items-center">
                     <span className="text-lg">Pre-Registration</span>
@@ -291,8 +291,8 @@ export default function Home() {
               </h2>
             </div>
             <div className="cyber-separator mb-8"></div>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Capture The Flag is a cybersecurity competition designed to challenge and develop your hacking skills
+            <p className="text-xl md:text-2xl text-muted-foreground max-w-4xl mx-auto leading-relaxed">
+              Capture The Flag is a cybersecurity competition designed to challenge and develop your hacking skills through real-world scenarios
             </p>
           </motion.div>
 
@@ -414,8 +414,8 @@ export default function Home() {
               </h2>
             </div>
             <div className="cyber-separator mb-8"></div>
-            <p className="text-xl text-muted-foreground">
-              Get in touch with us for any queries or additional information
+            <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+              Get in touch with us for any queries or additional information about the event
             </p>
           </motion.div>
 
