@@ -591,63 +591,147 @@ export default function Home() {
         </motion.div>
       </section>
 
-      {/* Footer */}
-      <footer className="relative bg-card/50 section-padding">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
-            <div>
-              <h3 className="text-xl font-orbitron font-bold mb-4 text-primary" data-testid="footer-title">
-                CTF Cognito 2025
-              </h3>
-              <p className="text-muted-foreground leading-relaxed">
-                Kerala's premier cybersecurity challenge organized by Royal College of Engineering and Technology 
-                in association with Offenso.
-              </p>
+      {/* Enhanced Cyber Footer */}
+      <footer className="relative bg-gradient-to-t from-background via-card/50 to-card/20 border-t border-primary/30 section-padding">
+        <div className="absolute inset-0 cyber-grid opacity-20"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-primary/5 via-accent/5 to-secondary/5"></div>
+        
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          {/* Top Section with Enhanced Layout */}
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
+            {/* CTF Cognito Brand */}
+            <div className="md:col-span-2">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6 }}
+              >
+                <h3 className="text-3xl font-orbitron font-black mb-6 text-gradient neon-glow" data-testid="footer-title">
+                  CTF COGNITO 2025
+                </h3>
+                <p className="text-lg text-muted-foreground leading-relaxed mb-6">
+                  Kerala's premier cybersecurity challenge featuring cutting-edge security competitions,
+                  networking opportunities, and skill development workshops.
+                </p>
+                <div className="grid grid-cols-2 gap-4 text-sm">
+                  <div className="flex items-center space-x-2">
+                    <Calendar className="text-primary" size={16} />
+                    <span className="text-foreground">October 17, 2025</span>
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    <Clock className="text-primary" size={16} />
+                    <span className="text-foreground">10 AM - 4 PM</span>
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    <Trophy className="text-primary" size={16} />
+                    <span className="text-foreground">₹8,000+ Prizes</span>
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    <Users className="text-primary" size={16} />
+                    <span className="text-foreground">Solo/Duo Teams</span>
+                  </div>
+                </div>
+              </motion.div>
             </div>
             
+            {/* Quick Navigation */}
             <div>
-              <h4 className="text-lg font-semibold mb-4 text-foreground">Quick Links</h4>
-              <div className="space-y-2">
-                <a href="#home" className="block text-muted-foreground hover:text-primary transition-colors" data-testid="footer-link-home">Home</a>
-                <a href="#event" className="block text-muted-foreground hover:text-primary transition-colors" data-testid="footer-link-event">Event Details</a>
-                <a href="#about" className="block text-muted-foreground hover:text-primary transition-colors" data-testid="footer-link-about">About CTF</a>
-                <a href="#contact" className="block text-muted-foreground hover:text-primary transition-colors" data-testid="footer-link-contact">Contact</a>
-              </div>
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: 0.1 }}
+              >
+                <h4 className="text-xl font-orbitron font-bold mb-6 text-secondary">Quick Links</h4>
+                <div className="space-y-3">
+                  <a href="#home" className="block text-muted-foreground hover:text-primary transition-all duration-300 hover:translate-x-2 flex items-center space-x-2" data-testid="footer-link-home">
+                    <span className="w-1 h-1 bg-primary rounded-full opacity-50"></span>
+                    <span>Home</span>
+                  </a>
+                  <a href="#event" className="block text-muted-foreground hover:text-primary transition-all duration-300 hover:translate-x-2 flex items-center space-x-2" data-testid="footer-link-event">
+                    <span className="w-1 h-1 bg-primary rounded-full opacity-50"></span>
+                    <span>Event Details</span>
+                  </a>
+                  <a href="#about" className="block text-muted-foreground hover:text-primary transition-all duration-300 hover:translate-x-2 flex items-center space-x-2" data-testid="footer-link-about">
+                    <span className="w-1 h-1 bg-primary rounded-full opacity-50"></span>
+                    <span>About CTF</span>
+                  </a>
+                  <a href="#contact" className="block text-muted-foreground hover:text-primary transition-all duration-300 hover:translate-x-2 flex items-center space-x-2" data-testid="footer-link-contact">
+                    <span className="w-1 h-1 bg-primary rounded-full opacity-50"></span>
+                    <span>Contact</span>
+                  </a>
+                </div>
+              </motion.div>
             </div>
             
+            {/* Connect & Follow */}
             <div>
-              <h4 className="text-lg font-semibold mb-4 text-foreground">Follow Us</h4>
-              <div className="flex space-x-4">
-                <a href="#" className="text-muted-foreground hover:text-primary transition-colors text-xl" data-testid="footer-social-instagram">
-                  <Instagram />
-                </a>
-                <a href="#" className="text-muted-foreground hover:text-primary transition-colors text-xl" data-testid="footer-social-twitter">
-                  <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
-                  </svg>
-                </a>
-                <a href="#" className="text-muted-foreground hover:text-primary transition-colors text-xl" data-testid="footer-social-linkedin">
-                  <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
-                  </svg>
-                </a>
-                <a href="#" className="text-muted-foreground hover:text-primary transition-colors text-xl" data-testid="footer-social-telegram">
-                  <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M12 0C5.376 0 0 5.376 0 12s5.376 12 12 12 12-5.376 12-12S18.624 0 12 0zm5.568 8.16c-.18 1.896-.96 6.504-1.356 8.628-.168.9-.504 1.2-.816 1.236-.696.06-1.224-.456-1.896-.9-1.056-.696-1.656-1.128-2.676-1.8-1.188-.78-.42-1.212.264-1.908.18-.18 3.252-2.976 3.312-3.228a.24.24 0 00-.06-.216c-.072-.06-.168-.036-.24-.024-.096.024-1.62 1.032-4.572 3.036-.432.3-.816.444-1.164.432-.384-.012-1.116-.216-1.668-.396-.66-.216-1.188-.336-1.14-.708.024-.192.156-.384.396-.576 1.716-.756 2.856-1.344 3.396-1.728 1.548-.756 3.132-1.584 4.44-3.084z"/>
-                  </svg>
-                </a>
-              </div>
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: 0.2 }}
+              >
+                <h4 className="text-xl font-orbitron font-bold mb-6 text-secondary">Connect</h4>
+                <div className="space-y-4">
+                  <p className="text-muted-foreground text-sm mb-4">
+                    Follow us for updates and cybersecurity insights
+                  </p>
+                  <div className="flex space-x-4">
+                    <a href="#" className="group p-3 rounded-lg bg-card/50 border border-primary/20 hover:border-primary/50 transition-all duration-300 hover:scale-110 neon-border" data-testid="footer-social-instagram">
+                      <Instagram className="text-muted-foreground group-hover:text-primary transition-colors" size={20} />
+                    </a>
+                    <a href="#" className="group p-3 rounded-lg bg-card/50 border border-primary/20 hover:border-primary/50 transition-all duration-300 hover:scale-110 neon-border" data-testid="footer-social-twitter">
+                      <svg className="w-5 h-5 text-muted-foreground group-hover:text-primary transition-colors" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                      </svg>
+                    </a>
+                    <a href="#" className="group p-3 rounded-lg bg-card/50 border border-primary/20 hover:border-primary/50 transition-all duration-300 hover:scale-110 neon-border" data-testid="footer-social-linkedin">
+                      <svg className="w-5 h-5 text-muted-foreground group-hover:text-primary transition-colors" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                      </svg>
+                    </a>
+                    <a href="#" className="group p-3 rounded-lg bg-card/50 border border-primary/20 hover:border-primary/50 transition-all duration-300 hover:scale-110 neon-border" data-testid="footer-social-telegram">
+                      <svg className="w-5 h-5 text-muted-foreground group-hover:text-primary transition-colors" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M12 0C5.376 0 0 5.376 0 12s5.376 12 12 12 12-5.376 12-12S18.624 0 12 0zm5.568 8.16c-.18 1.896-.96 6.504-1.356 8.628-.168.9-.504 1.2-.816 1.236-.696.06-1.224-.456-1.896-.9-1.056-.696-1.656-1.128-2.676-1.8-1.188-.78-.42-1.212.264-1.908.18-.18 3.252-2.976 3.312-3.228a.24.24 0 00-.06-.216c-.072-.06-.168-.036-.24-.024-.096.024-1.62 1.032-4.572 3.036-.432.3-.816.444-1.164.432-.384-.012-1.116-.216-1.668-.396-.66-.216-1.188-.336-1.14-.708.024-.192.156-.384.396-.576 1.716-.756 2.856-1.344 3.396-1.728 1.548-.756 3.132-1.584 4.44-3.084z"/>
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+              </motion.div>
             </div>
           </div>
           
-          <div className="border-t border-border pt-8 text-center">
-            <p className="text-muted-foreground" data-testid="footer-copyright">
-              © 2025 Royal College of Engineering and Technology. All rights reserved.
-            </p>
-            <p className="text-sm text-muted-foreground mt-2" data-testid="footer-credit">
-              Designed with <Heart className="inline text-destructive" size={16} /> for the cybersecurity community
-            </p>
-          </div>
+          {/* Cyber Separator */}
+          <div className="cyber-separator mb-8"></div>
+          
+          {/* Bottom Section */}
+          <motion.div 
+            className="text-center"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.3 }}
+          >
+            <div className="mb-6">
+              <p className="text-lg font-orbitron font-semibold text-gradient mb-2" data-testid="footer-organizer">
+                Capture The Flag
+              </p>
+              <p className="text-muted-foreground">
+                Organized by Royal College of Engineering and Technology in association with Offenso
+              </p>
+            </div>
+            
+            <div className="flex flex-col md:flex-row justify-between items-center pt-6 border-t border-primary/20">
+              <p className="text-muted-foreground mb-4 md:mb-0" data-testid="footer-copyright">
+                © 2025 RCET. All rights reserved. | CTF Cognito
+              </p>
+              <p className="text-sm text-muted-foreground flex items-center" data-testid="footer-credit">
+                Crafted with <Heart className="inline text-destructive mx-1 animate-pulse" size={16} /> for the cybersecurity community
+              </p>
+            </div>
+          </motion.div>
         </div>
       </footer>
     </div>
