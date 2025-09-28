@@ -703,9 +703,17 @@ export default function Home() {
               <p className="text-lg font-orbitron font-semibold text-gradient mb-2" data-testid="footer-organizer">
                 Capture The Flag
               </p>
-              <p className="text-muted-foreground">
-                Organized by Royal College of Engineering and Technology in association with Offenso
+              <p className="text-muted-foreground mb-4">
+                Organized by Royal College of Engineering and Technology
               </p>
+              <div className="flex items-center justify-center space-x-2">
+                <span className="text-muted-foreground">in association with</span>
+                <img 
+                  src={offensoLogo} 
+                  alt="Offenso Logo" 
+                  className="w-20 h-10 object-contain filter brightness-110" 
+                />
+              </div>
             </div>
             
             <div className="flex flex-col md:flex-row justify-between items-center pt-6 border-t border-primary/20">
