@@ -419,7 +419,7 @@ export default function Home() {
                       <Phone className="text-secondary" />
                       <div>
                         <p className="font-semibold text-foreground">Phone</p>
-                        <p className="text-muted-foreground">Contact organizers for details</p>
+                        <p className="text-muted-foreground">+91 9495909680</p>
                       </div>
                     </div>
                     <div className="flex items-center space-x-4">
