@@ -30,7 +30,7 @@ import {
   Heart
 } from "lucide-react";
 import ctfCognitoLogo from "@assets/Adobe Express - file_1759044466581.png";
-import offensoLogo from "@assets/Offenso-Logo-White.png_1759044466580.webp";
+import offensoLogo from "@assets/Offenso-Logo-White.png_1759068476216.webp";
 import cognitoTechfestLogo from "@assets/Untitled design_1759044466581.png";
 
 export default function Home() {
