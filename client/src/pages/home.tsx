@@ -195,7 +195,7 @@ export default function Home() {
                     <span className="text-lg">2nd Place</span>
                     <span className="text-xl font-bold text-accent">₹3,000</span>
                   </div>
-                  <p className="text-sm text-muted-foreground mt-4">+ KTU Certificates for all participants</p>
+                  <p className="text-sm text-muted-foreground mt-4">+ Certificates for all participants</p>
                 </div>
               </CyberCard>
             </motion.div>
@@ -243,7 +243,7 @@ export default function Home() {
                   />
                 </div>
                 <p className="text-lg text-muted-foreground">In Association With</p>
-                <p className="text-xl font-semibold text-primary">Offenso</p>
+                <p className="text-xl font-semibold text-primary">Offenso Hackers Academy</p>
               </div>
               
               {/* College Logo */}
@@ -256,7 +256,7 @@ export default function Home() {
                   />
                 </div>
                 <p className="text-lg text-muted-foreground">Hosted By</p>
-                <p className="text-xl font-semibold text-primary">Capture The Flag</p>
+                <p className="text-xl font-semibold text-primary">Student Comittee Cybersecurity</p>
               </div>
             </div>
           </motion.div>
