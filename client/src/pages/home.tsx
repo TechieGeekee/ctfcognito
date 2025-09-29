@@ -496,7 +496,6 @@ export default function Home() {
                         <ul className="text-muted-foreground text-sm space-y-1 mt-2">
                           <li>• High-speed internet connectivity provided</li>
                           <li>• Power outlets available at all workstations</li>
-                          <li>• Refreshments will be served</li>
                           <li>• Parking facilities available</li>
                         </ul>
                       </div>
