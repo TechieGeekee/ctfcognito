@@ -41,7 +41,9 @@ export default function Navigation() {
             <img 
               src={cognitoTechfestLogo} 
               alt="CTF Logo" 
-              className="w-12 h-12 object-contain"
+              className="w-12 h-12 object-contain transition-opacity duration-300"
+              loading="eager"
+              decoding="async"
               data-testid="nav-logo"
             />
             <div className="hidden md:flex items-center space-x-3">
