@@ -465,6 +465,30 @@ export default function Home() {
               </motion.div>
 
               <motion.div variants={fadeInUp}>
+                <CyberCard data-testid="card-coordinators">
+                  <h3 className="text-2xl font-orbitron font-bold mb-6 text-primary">
+                    <Users className="inline mr-3" />Event Coordinators
+                  </h3>
+                  <div className="space-y-4">
+                    <div className="flex items-center space-x-4">
+                      <Phone className="text-secondary" />
+                      <div>
+                        <p className="font-semibold text-foreground">Abhinav K</p>
+                        <a href="tel:+917306989680" className="text-muted-foreground hover:text-secondary transition-colors cursor-pointer">+91 7306989680</a>
+                      </div>
+                    </div>
+                    <div className="flex items-center space-x-4">
+                      <Phone className="text-secondary" />
+                      <div>
+                        <p className="font-semibold text-foreground">Anfas PK</p>
+                        <a href="tel:+919037484202" className="text-muted-foreground hover:text-secondary transition-colors cursor-pointer">+91 9037484202</a>
+                      </div>
+                    </div>
+                  </div>
+                </CyberCard>
+              </motion.div>
+
+              <motion.div variants={fadeInUp}>
                 <CyberCard data-testid="card-questions">
                   <h3 className="text-2xl font-orbitron font-bold mb-6 text-primary">
                     <Info className="inline mr-3" />Have Questions?
