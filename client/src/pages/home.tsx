@@ -432,14 +432,14 @@ export default function Home() {
                       <Mail className="text-secondary" />
                       <div>
                         <p className="font-semibold text-foreground">Email</p>
-                        <p className="text-muted-foreground">Contact organizers for details</p>
+                        <a href="mailto:abhinavkoolath@gmail.com" className="text-muted-foreground hover:text-secondary transition-colors cursor-pointer">abhinavkoolath@gmail.com</a>
                       </div>
                     </div>
                     <div className="flex items-center space-x-4">
                       <Instagram className="text-secondary" />
                       <div>
                         <p className="font-semibold text-foreground">Instagram</p>
-                        <p className="text-muted-foreground">Follow for updates</p>
+                        <a href="https://www.instagram.com/ctf_cognito/" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-secondary transition-colors cursor-pointer">@ctf_cognito</a>
                       </div>
                     </div>
                   </div>
@@ -670,24 +670,34 @@ export default function Home() {
                     Follow us for updates and cybersecurity insights
                   </p>
                   <div className="flex space-x-4">
-                    <a href="#" className="group p-3 rounded-lg bg-card/50 border border-primary/20 hover:border-primary/50 transition-all duration-300 hover:scale-110 neon-border" data-testid="footer-social-instagram">
+                    <a href="https://www.instagram.com/ctf_cognito/" target="_blank" rel="noopener noreferrer" className="group p-3 rounded-lg bg-card/50 border border-primary/20 hover:border-primary/50 transition-all duration-300 hover:scale-110 neon-border" data-testid="footer-social-instagram">
                       <Instagram className="text-muted-foreground group-hover:text-primary transition-colors" size={20} />
                     </a>
-                    <a href="#" className="group p-3 rounded-lg bg-card/50 border border-primary/20 hover:border-primary/50 transition-all duration-300 hover:scale-110 neon-border" data-testid="footer-social-twitter">
-                      <svg className="w-5 h-5 text-muted-foreground group-hover:text-primary transition-colors" fill="currentColor" viewBox="0 0 24 24">
-                        <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
-                      </svg>
-                    </a>
-                    <a href="#" className="group p-3 rounded-lg bg-card/50 border border-primary/20 hover:border-primary/50 transition-all duration-300 hover:scale-110 neon-border" data-testid="footer-social-linkedin">
+                    <div className="relative group">
+                      <div className="p-3 rounded-lg bg-card/50 border border-primary/20 hover:border-primary/50 transition-all duration-300 hover:scale-110 neon-border cursor-not-allowed opacity-60" data-testid="footer-social-twitter">
+                        <svg className="w-5 h-5 text-muted-foreground group-hover:text-primary transition-colors" fill="currentColor" viewBox="0 0 24 24">
+                          <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                        </svg>
+                      </div>
+                      <div className="absolute -top-10 left-1/2 transform -translate-x-1/2 bg-background border border-primary/30 text-primary px-2 py-1 rounded text-xs opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap z-10">
+                        Coming Soon
+                      </div>
+                    </div>
+                    <a href="https://www.linkedin.com/in/abhinavkoolath" target="_blank" rel="noopener noreferrer" className="group p-3 rounded-lg bg-card/50 border border-primary/20 hover:border-primary/50 transition-all duration-300 hover:scale-110 neon-border" data-testid="footer-social-linkedin">
                       <svg className="w-5 h-5 text-muted-foreground group-hover:text-primary transition-colors" fill="currentColor" viewBox="0 0 24 24">
                         <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
                       </svg>
                     </a>
-                    <a href="#" className="group p-3 rounded-lg bg-card/50 border border-primary/20 hover:border-primary/50 transition-all duration-300 hover:scale-110 neon-border" data-testid="footer-social-telegram">
-                      <svg className="w-5 h-5 text-muted-foreground group-hover:text-primary transition-colors" fill="currentColor" viewBox="0 0 24 24">
-                        <path d="M12 0C5.376 0 0 5.376 0 12s5.376 12 12 12 12-5.376 12-12S18.624 0 12 0zm5.568 8.16c-.18 1.896-.96 6.504-1.356 8.628-.168.9-.504 1.2-.816 1.236-.696.06-1.224-.456-1.896-.9-1.056-.696-1.656-1.128-2.676-1.8-1.188-.78-.42-1.212.264-1.908.18-.18 3.252-2.976 3.312-3.228a.24.24 0 00-.06-.216c-.072-.06-.168-.036-.24-.024-.096.024-1.62 1.032-4.572 3.036-.432.3-.816.444-1.164.432-.384-.012-1.116-.216-1.668-.396-.66-.216-1.188-.336-1.14-.708.024-.192.156-.384.396-.576 1.716-.756 2.856-1.344 3.396-1.728 1.548-.756 3.132-1.584 4.44-3.084z"/>
-                      </svg>
-                    </a>
+                    <div className="relative group">
+                      <div className="p-3 rounded-lg bg-card/50 border border-primary/20 hover:border-primary/50 transition-all duration-300 hover:scale-110 neon-border cursor-not-allowed opacity-60" data-testid="footer-social-telegram">
+                        <svg className="w-5 h-5 text-muted-foreground group-hover:text-primary transition-colors" fill="currentColor" viewBox="0 0 24 24">
+                          <path d="M12 0C5.376 0 0 5.376 0 12s5.376 12 12 12 12-5.376 12-12S18.624 0 12 0zm5.568 8.16c-.18 1.896-.96 6.504-1.356 8.628-.168.9-.504 1.2-.816 1.236-.696.06-1.224-.456-1.896-.9-1.056-.696-1.656-1.128-2.676-1.8-1.188-.78-.42-1.212.264-1.908.18-.18 3.252-2.976 3.312-3.228a.24.24 0 00-.06-.216c-.072-.06-.168-.036-.24-.024-.096.024-1.62 1.032-4.572 3.036-.432.3-.816.444-1.164.432-.384-.012-1.116-.216-1.668-.396-.66-.216-1.188-.336-1.14-.708.024-.192.156-.384.396-.576 1.716-.756 2.856-1.344 3.396-1.728 1.548-.756 3.132-1.584 4.44-3.084z"/>
+                        </svg>
+                      </div>
+                      <div className="absolute -top-10 left-1/2 transform -translate-x-1/2 bg-background border border-primary/30 text-primary px-2 py-1 rounded text-xs opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap z-10">
+                        Coming Soon
+                      </div>
+                    </div>
                   </div>
                 </div>
               </motion.div>
