@@ -73,12 +73,12 @@ export default function Home() {
           variants={staggerContainer}
         >
           {/* CTF Cognito Logo */}
-          <motion.div className="mb-8 flex justify-center" variants={fadeInUp}>
+          <motion.div className="mb-6 sm:mb-8 flex justify-center" variants={fadeInUp}>
             <div className="relative">
               <img 
                 src={ctfCognitoLogo} 
                 alt="CTF Cognito Logo" 
-                className="w-64 h-64 object-contain" 
+                className="w-32 h-32 sm:w-48 sm:h-48 md:w-64 md:h-64 object-contain" 
                 data-testid="ctf-cognito-logo"
               />
             </div>
@@ -88,13 +88,13 @@ export default function Home() {
           <motion.div variants={fadeInUp}>
             <ModernText 
               text="CTF COGNITO" 
-              className="text-6xl md:text-8xl font-orbitron font-black mb-6 text-gradient"
+              className="text-3xl sm:text-4xl md:text-6xl lg:text-8xl font-orbitron font-black mb-4 sm:mb-6 text-gradient leading-tight"
               data-testid="main-heading"
             />
           </motion.div>
           
           <motion.p 
-            className="text-xl md:text-3xl text-muted-foreground mb-6 font-semibold tracking-wide"
+            className="text-base sm:text-lg md:text-xl lg:text-3xl text-muted-foreground mb-4 sm:mb-6 font-semibold tracking-wide px-4 sm:px-0"
             variants={fadeInUp}
             data-testid="subtitle"
           >
@@ -102,7 +102,7 @@ export default function Home() {
           </motion.p>
           
           <motion.p 
-            className="text-xl md:text-2xl text-secondary mb-16 font-medium tracking-wider"
+            className="text-lg sm:text-xl md:text-2xl text-secondary mb-8 sm:mb-12 md:mb-16 font-medium tracking-wider"
             variants={fadeInUp}
             data-testid="organizer-text"
           >
@@ -110,8 +110,8 @@ export default function Home() {
           </motion.p>
 
           {/* Countdown Timer */}
-          <motion.div className="mb-12" variants={fadeInUp}>
-            <h3 className="text-2xl font-orbitron font-bold mb-6 text-primary" data-testid="countdown-heading">
+          <motion.div className="mb-8 sm:mb-12 px-4 sm:px-0" variants={fadeInUp}>
+            <h3 className="text-xl sm:text-2xl font-orbitron font-bold mb-4 sm:mb-6 text-primary" data-testid="countdown-heading">
               Event Countdown
             </h3>
             <CountdownTimer targetDate="2025-10-17T10:00:00" />
@@ -119,24 +119,24 @@ export default function Home() {
 
           {/* CTA Buttons */}
           <motion.div 
-            className="flex flex-col sm:flex-row gap-4 justify-center"
+            className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center px-4 sm:px-0 max-w-md sm:max-w-none mx-auto"
             variants={fadeInUp}
           >
             <Button
               onClick={handleRegistration}
-              className="inline-flex items-center px-8 py-4 bg-primary hover:bg-primary/90 text-primary-foreground font-semibold rounded-lg transition-colors duration-300"
+              className="inline-flex items-center justify-center w-full sm:w-auto px-4 sm:px-6 md:px-8 py-3 sm:py-4 bg-primary hover:bg-primary/90 text-primary-foreground font-semibold rounded-lg transition-colors duration-300"
               data-testid="button-register"
             >
-              <Users className="mr-3 h-5 w-5" />
+              <Users className="mr-2 sm:mr-3 h-4 w-4 sm:h-5 sm:w-5" />
               Register Now
             </Button>
             <Button
               variant="outline"
-              className="inline-flex items-center px-8 py-4 border-2 border-secondary text-secondary hover:bg-secondary hover:text-secondary-foreground rounded-lg transition-colors duration-300"
+              className="inline-flex items-center justify-center w-full sm:w-auto px-4 sm:px-6 md:px-8 py-3 sm:py-4 border-2 border-secondary text-secondary hover:bg-secondary hover:text-secondary-foreground rounded-lg transition-colors duration-300"
               onClick={() => document.getElementById('event')?.scrollIntoView({ behavior: 'smooth' })}
               data-testid="button-learn-more"
             >
-              <Info className="mr-3 h-5 w-5" />
+              <Info className="mr-2 sm:mr-3 h-4 w-4 sm:h-5 sm:w-5" />
               Learn More
             </Button>
           </motion.div>
@@ -451,6 +451,7 @@ export default function Home() {
                   </p>
                   <Button 
                     className="w-full bg-primary hover:bg-primary/90 text-primary-foreground"
+                    onClick={() => window.open('tel:+919495909680', '_self')}
                     data-testid="button-contact-organizers"
                   >
                     <Phone className="mr-2 h-4 w-4" />
@@ -505,8 +506,8 @@ export default function Home() {
                   </h3>
                   <div className="space-y-3">
                     {[
-                      "Laptop with Kali Linux/Ubuntu preferred",
-                      "Charger and extension cord",
+                      "Laptop with Kali Linux/Ubuntu preferred (or use lab PCs provided)",
+                      "Charger and extension cord (if bringing own laptop)",
                       "Valid ID proof for verification",
                       "Notebook and pen for rough work"
                     ].map((item, index) => (
