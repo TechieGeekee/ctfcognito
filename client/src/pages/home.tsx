@@ -73,12 +73,12 @@ export default function Home() {
           variants={staggerContainer}
         >
           {/* CTF Cognito Logo */}
-          <motion.div className="mb-6 sm:mb-8 flex justify-center" variants={fadeInUp}>
-            <div className="relative">
+          <motion.div className="mb-0 -mt-8 sm:-mt-12 flex justify-center" variants={fadeInUp}>
+            <div className="relative filter drop-shadow-[0_0_24px_rgba(0,255,255,0.35)]">
               <img 
                 src={ctfCognitoLogo} 
                 alt="CTF Cognito Logo" 
-                className="w-32 h-32 sm:w-48 sm:h-48 md:w-64 md:h-64 object-contain transition-opacity duration-300" 
+                className="h-auto w-40 sm:w-56 md:w-72 lg:w-80 object-contain transition-opacity duration-300" 
                 loading="eager"
                 decoding="async"
                 data-testid="ctf-cognito-logo"
