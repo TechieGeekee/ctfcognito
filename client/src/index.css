@@ -77,6 +77,12 @@
     overflow-x: hidden;
   }
 
+  /* Image loading optimization */
+  img {
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+  }
+
   /* Cyber-themed Scrollbar Styling */
   ::-webkit-scrollbar {
     width: 12px;
