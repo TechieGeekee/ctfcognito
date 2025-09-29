@@ -175,10 +175,27 @@ export default function Home() {
               <CyberCard className="text-center" data-testid="card-date-time">
                 <Calendar className="text-4xl text-primary mb-4 mx-auto" />
                 <h3 className="text-2xl md:text-3xl font-orbitron font-black mb-6 text-gradient">Date & Time</h3>
-                <div className="space-y-2">
+                <div className="space-y-4">
                   <p className="text-lg font-semibold text-secondary">October 17, 2025</p>
-                  <p className="text-lg text-muted-foreground">10:00 AM - 4:00 PM</p>
-                  <p className="text-sm text-muted-foreground">6 Hours of Intense Competition</p>
+                  
+                  <div className="bg-card/30 rounded-lg p-4 space-y-3">
+                    <div className="flex justify-between items-center">
+                      <span className="text-muted-foreground">Registration</span>
+                      <span className="text-foreground font-medium">9:00 AM - 10:00 AM</span>
+                    </div>
+                    <div className="border-t border-border/50"></div>
+                    <div className="flex justify-between items-center">
+                      <span className="text-muted-foreground">Competition</span>
+                      <span className="text-primary font-semibold">10:00 AM - 4:00 PM</span>
+                    </div>
+                    <div className="border-t border-border/50"></div>
+                    <div className="flex justify-between items-center">
+                      <span className="text-muted-foreground">Results</span>
+                      <span className="text-foreground font-medium">4:30 PM - 5:00 PM</span>
+                    </div>
+                  </div>
+                  
+                  <p className="text-sm text-muted-foreground text-center">6 Hours of Intense Competition</p>
                 </div>
               </CyberCard>
             </motion.div>
@@ -216,7 +233,7 @@ export default function Home() {
                     <span className="text-lg">Spot Registration</span>
                     <span className="text-xl font-bold text-accent">₹80</span>
                   </div>
-                  <p className="text-sm text-muted-foreground">Solo or Duo Teams</p>
+                  <p className="text-sm text-muted-foreground">Solo or Duo Teams (1-2 members)</p>
                   <p className="text-sm text-destructive font-semibold">Deadline: Oct 15, 2025</p>
                 </div>
               </CyberCard>
@@ -314,8 +331,8 @@ export default function Home() {
                     <Users className="inline mr-3" />Team Format
                   </h3>
                   <p className="text-muted-foreground leading-relaxed">
-                    Participate individually or form a team of maximum 2 members. Collaboration and 
-                    diverse skill sets often lead to better performance in solving complex challenges.
+                    Participate individually or form a team of maximum 2 members. 
+                    Collaboration and diverse skill sets often lead to better performance in solving complex challenges.
                   </p>
                 </CyberCard>
               </motion.div>
@@ -347,12 +364,11 @@ export default function Home() {
                   </h3>
                   <div className="space-y-4">
                     {[
-                      { icon: Globe, label: "Web Security" },
+                      { icon: Globe, label: "Web Exploitation" },
+                      { icon: Search, label: "OSINT (Open-Source Intelligence)" },
                       { icon: Key, label: "Cryptography" },
-                      { icon: Search, label: "Digital Forensics" },
-                      { icon: Settings, label: "Reverse Engineering" },
-                      { icon: Network, label: "Network Security" },
-                      { icon: Binary, label: "Binary Exploitation" }
+                      { icon: Search, label: "Forensics" },
+                      { icon: Settings, label: "Reverse Engineering" }
                     ].map((category, index) => (
                       <div key={index} className="flex items-center space-x-3">
                         <category.icon className="text-secondary" size={20} />
@@ -370,10 +386,12 @@ export default function Home() {
                   </h3>
                   <ul className="space-y-2 text-muted-foreground">
                     {[
-                      "No attacking other participants' systems",
-                      "Collaboration within teams is encouraged",
-                      "Use of automated tools is allowed",
-                      "Internet access provided for research"
+                      "All challenges must be solved within the provided environment",
+                      "No brute forcing challenges or platforms unless explicitly mentioned",
+                      "Collaboration between different teams is strictly prohibited",
+                      "Flags must be submitted exactly as instructed",
+                      "No attacking other participants or infrastructure outside intended scope",
+                      "White-hat hacking competition only - ethical conduct required"
                     ].map((rule, index) => (
                       <li key={index} className="flex items-start space-x-2">
                         <Check className="text-secondary mt-1 flex-shrink-0" size={16} />
@@ -573,7 +591,7 @@ export default function Home() {
             </div>
             <div className="flex items-center space-x-2">
               <Clock className="text-primary" size={16} />
-              <span>10 AM - 4 PM</span>
+              <span>Reg: 9-10 AM | Competition: 10 AM-4 PM | Results: 4:30-5 PM</span>
             </div>
             <div className="flex items-center space-x-2">
               <Trophy className="text-primary" size={16} />
@@ -611,7 +629,7 @@ export default function Home() {
                   </div>
                   <div className="flex items-center space-x-2">
                     <Clock className="text-primary" size={16} />
-                    <span className="text-foreground">10 AM - 4 PM</span>
+                    <span className="text-foreground">Reg: 9-10 AM | Competition: 10 AM-4 PM | Results: 4:30-5 PM</span>
                   </div>
                   <div className="flex items-center space-x-2">
                     <Trophy className="text-primary" size={16} />
