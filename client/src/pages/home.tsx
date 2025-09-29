@@ -78,7 +78,9 @@ export default function Home() {
               <img 
                 src={ctfCognitoLogo} 
                 alt="CTF Cognito Logo" 
-                className="w-32 h-32 sm:w-48 sm:h-48 md:w-64 md:h-64 object-contain" 
+                className="w-32 h-32 sm:w-48 sm:h-48 md:w-64 md:h-64 object-contain transition-opacity duration-300" 
+                loading="eager"
+                decoding="async"
                 data-testid="ctf-cognito-logo"
               />
             </div>
@@ -240,6 +242,8 @@ export default function Home() {
                     src={offensoLogo} 
                     alt="Offenso Logo" 
                     className="w-40 h-20 object-contain mx-auto filter brightness-110 hover:brightness-125 transition-all duration-300" 
+                    loading="lazy"
+                    decoding="async"
                   />
                 </div>
                 <p className="text-lg text-muted-foreground">In Association With</p>
@@ -252,7 +256,9 @@ export default function Home() {
                   <img 
                     src={cognitoTechfestLogo} 
                     alt="Cognito Techfest Logo" 
-                    className="w-24 h-24 object-contain mx-auto logo-glow" 
+                    className="w-24 h-24 object-contain mx-auto logo-glow transition-opacity duration-300" 
+                    loading="lazy"
+                    decoding="async"
                   />
                 </div>
                 <p className="text-lg text-muted-foreground">Hosted By</p>
@@ -711,7 +717,9 @@ export default function Home() {
                 <img 
                   src={offensoLogo} 
                   alt="Offenso Logo" 
-                  className="w-20 h-10 object-contain filter brightness-110" 
+                  className="w-20 h-10 object-contain filter brightness-110 transition-opacity duration-300" 
+                  loading="lazy"
+                  decoding="async"
                 />
               </div>
             </div>
