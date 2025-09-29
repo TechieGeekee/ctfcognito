@@ -486,7 +486,7 @@ export default function Home() {
                       <p className="text-muted-foreground">
                         Akkikavu, Thrissur, Kerala 680501<br />
                         Computer Science Department<br />
-                        Lab Complex - Block A
+                        IIT Bombay Lab
                       </p>
                     </div>
                     <div className="flex items-start space-x-4 mt-6">
