@@ -738,7 +738,7 @@ export default function Home() {
                 © 2025 RCET. All rights reserved. | CTF Cognito
               </p>
               <p className="text-sm text-muted-foreground flex items-center" data-testid="footer-credit">
-                Crafted with <Heart className="inline text-destructive mx-1 animate-pulse" size={16} /> for the cybersecurity community
+                Crafted with <Heart className="inline text-destructive mx-1 animate-pulse" size={16} /> by Cybersecurity Student Coordinators
               </p>
             </div>
           </motion.div>
