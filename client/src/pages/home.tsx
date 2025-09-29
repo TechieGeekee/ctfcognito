@@ -591,7 +591,7 @@ export default function Home() {
             </div>
             <div className="flex items-center space-x-2">
               <Clock className="text-primary" size={16} />
-              <span>Reg: 9-10 AM | Competition: 10 AM-4 PM | Results: 4:30-5 PM</span>
+              <span>10 AM - 4 PM</span>
             </div>
             <div className="flex items-center space-x-2">
               <Trophy className="text-primary" size={16} />
@@ -629,7 +629,7 @@ export default function Home() {
                   </div>
                   <div className="flex items-center space-x-2">
                     <Clock className="text-primary" size={16} />
-                    <span className="text-foreground">Reg: 9-10 AM | Competition: 10 AM-4 PM | Results: 4:30-5 PM</span>
+                    <span className="text-foreground">10 AM - 4 PM</span>
                   </div>
                   <div className="flex items-center space-x-2">
                     <Trophy className="text-primary" size={16} />
